@@ -21,8 +21,4 @@ O portfólio está dividido em várias seções:
 4. **Certificados**: Lista os certificados que adquiri em minha jornada profissional e educacional.
 5. **Contato**: Informações de contato, incluindo email e LinkedIn.
 
-## Como Rodar Localmente
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
