@@ -1,126 +1,212 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Luiz Felipe Dornelas | Desenvolvedor Full-Stack</title>
+    <meta name="description" content="Portfólio de Luiz Felipe Dornelas - Desenvolvedor Full-Stack com React, Django, Python e Salesforce">
+    <meta name="keywords" content="desenvolvedor, fullstack, react, django, python, salesforce, portfólio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Luiz Felipe Dornelas</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#linguagens">Linguagens</a></li>
-                    <li><a href="#certificados">Certificados</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="cabecalho">
+        <nav class="cabecalho__nav container">
+            <a href="#inicio" class="cabecalho__logo">Luiz<span>Felipe</span></a>
+            <ul class="cabecalho__menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificacoes">Certificações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="botao-tema" aria-label="Alternar modo claro/escuro">
+                <svg class="lua" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sol" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <button class="cabecalho__botao-menu" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <section id="sobre" class="section" data-aos="fade-up">
-        <h2>Sobre Mim</h2>
-        <p>Sou estudante de Sistemas de Informação apaixonado por tecnologia e desenvolvimento de software.</p>
-    </section>
+    <main>
+        <section id="inicio" class="hero container">
+            <div class="hero__conteudo">
+                <h1 class="hero__titulo">Transformando ideias em <span class="destaque digitar">soluções digitais</span></h1>
+                <p class="hero__subtitulo">Desenvolvedor Full-Stack com foco em <strong>React</strong>, <strong>Django</strong> e integração com <strong>Salesforce</strong></p>
+                <div class="hero__botoes">
+                    <a href="#projetos" class="botao botao--primario">Ver Projetos</a>
+                    <a href="#contato" class="botao botao--secundario">Contato</a>
+                </div>
+            </div>
+            <div class="hero__ilustracao">
+                <div class="hero__circulo">
+                    <div class="hero__codigo">{ code }</div>
+                </div>
+            </div>
+        </section>
 
-    <section id="habilidades" class="section" data-aos="fade-up">
-        <h2>Habilidades</h2>
-        <div class="skills">
-            <div class="skill">
-                <h3>React.js</h3>
-                <div class="bar" style="width: 90%;"></div>
+        <section id="sobre" class="secao secao--clara">
+            <div class="container">
+                <h2 class="secao__titulo">Sobre Mim</h2>
+                <div class="sobre__conteudo">
+                    <div class="sobre__texto">
+                        <p>Olá! Sou o Luiz, desenvolvedor apaixonado por criar soluções tecnológicas. Minha jornada evoluiu para o stack completo com <strong>React no front-end</strong> e <strong>Django/Python no back-end</strong>.</p>
+                        <p>Atualmente, estou expandindo minha expertise para o ecossistema <strong>Salesforce</strong>, completando a certificação de Administrador/Analista.</p>
+                        <p>Meu objetivo é construir aplicações que ofereçam uma experiência excepcional ao usuário final.</p>
+                    </div>
+                    <div class="sobre__imagem">
+                        <div class="sobre__avatar">LF</div>
+                    </div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="bar" style="width: 85%;"></div>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <div class="container">
+                <h2 class="secao__titulo">Habilidades & Tecnologias</h2>
+                <div class="habilidades__grid">
+                    <div class="habilidade-categoria">
+                        <h3>Front-End</h3>
+                        <div class="habilidade-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag tag--destaque">React.js</span>
+                        </div>
+                    </div>
+                    <div class="habilidade-categoria">
+                        <h3>Back-End</h3>
+                        <div class="habilidade-tags">
+                            <span class="tag tag--destaque">Python</span>
+                            <span class="tag tag--destaque">Django</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="habilidade-categoria">
+                        <h3>Plataformas</h3>
+                        <div class="habilidade-tags">
+                            <span class="tag tag--nova">Salesforce</span>
+                            <span class="tag">Git & GitHub</span>
+                            <span class="tag">VS Code</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>Django</h3>
-                <div class="bar" style="width: 70%;"></div>
+        </section>
+
+        <section id="projetos" class="secao secao--clara">
+            <div class="container">
+                <h2 class="secao__titulo">Projetos em Destaque</h2>
+                <div class="filtros">
+                    <button class="filtro filtro--ativo" data-filtro="todos">Todos</button>
+                    <button class="filtro" data-filtro="react">React</button>
+                    <button class="filtro" data-filtro="django">Django</button>
+                    <button class="filtro" data-filtro="salesforce">Salesforce</button>
+                </div>
+                <div class="projetos__grid">
+                    <article class="projeto-card" data-categorias="react django">
+                        <div class="projeto-card__imagem projeto1"></div>
+                        <div class="projeto-card__conteudo">
+                            <h3>Sistema de Gerenciamento</h3>
+                            <p>Aplicação full-stack com React e Django.</p>
+                            <div class="projeto-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Django</span>
+                            </div>
+                            <div class="projeto-card__links">
+                                <a href="#" class="link-icon">Demo</a>
+                                <a href="#" class="link-icon">Código</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="projeto-card" data-categorias="salesforce">
+                        <div class="projeto-card__imagem projeto2"></div>
+                        <div class="projeto-card__conteudo">
+                            <h3>Integração Salesforce</h3>
+                            <p>Dashboard com dados da API do Salesforce.</p>
+                            <div class="projeto-card__tags">
+                                <span class="tag tag--nova">Salesforce</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <div class="projeto-card__links">
+                                <a href="#" class="link-icon">Case Study</a>
+                                <a href="#" class="link-icon">Conceito</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="skill">
-                <h3>Python</h3>
-                <div class="bar" style="width: 85%;"></div>
+        </section>
+
+        <section id="certificacoes" class="secao">
+            <div class="container">
+                <h2 class="secao__titulo">Certificações</h2>
+                <div class="certificacoes__grid">
+                    <article class="certificado-card">
+                        <div class="certificado-card__cabecalho">
+                            <h3>Administrador/Analista Salesforce</h3>
+                            <span class="certificado-card__badge">NOVO</span>
+                        </div>
+                        <p class="certificado-card__instituicao">Udemy | Instrutor: Vitor Nishida</p>
+                        <p class="certificado-card__descricao">Curso completo abrangendo fundamentos da plataforma Salesforce.</p>
+                        <div class="certificado-card__tags">
+                            <span class="tag">Salesforce Platform</span>
+                            <span class="tag">CRM</span>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="skill">
-                <h3>Oracle SQL & PL/SQL</h3>
-                <div class="bar" style="width: 75%;"></div>
+        </section>
+
+        <section id="contato" class="secao secao--clara">
+            <div class="container">
+                <h2 class="secao__titulo">Contato</h2>
+                <div class="contato__grid">
+                    <form class="contato__form" id="formContato">
+                        <div class="form__grupo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form__grupo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__grupo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="botao botao--primario">Enviar</button>
+                    </form>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>© <span id="ano-atual">2025</span> Luiz Felipe Dornelas</p>
         </div>
-    </section>
-
-    <section id="linguagens" class="section" data-aos="fade-up">
-        <h2>Minhas Linguagens</h2>
-        <div class="linguagens">
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
-                <h3>React</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java">
-                <h3>Java</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
-                <h3>JavaScript</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/external-flat-juicy-fish/64/000000/external-html5-web-design-and-development-flat-flat-juicy-fish.png" alt="HTML5">
-                <h3>HTML</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/external-flat-juicy-fish/64/000000/external-css3-web-design-and-development-flat-flat-juicy-fish.png" alt="CSS">
-                <h3>CSS</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
-                <h3>Python</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django">
-                <h3>Django</h3>
-            </div>
-            <div class="linguagem">
-                <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle">
-                <h3>Oracle</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificados" class="section" data-aos="fade-up">
-        <h2>Certificados</h2>
-        <div class="certificados">
-            <div class="certificado">
-                <h3>Python - Santander Open Academy</h3>
-            </div>
-            <div class="certificado">
-                <h3>Google - Inteligência Artificial e Produtividade - Santander Open Academy</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section" data-aos="fade-up">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:luizfelipe@email.com">lfdornelas10@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/luiz-felipe-dornelas-173a7710b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Acesse aqui</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Luiz Felipe Dornelas</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1200,
-            once: true
-        });
-    </script>
+    <button class="botao-topo">↑</button>
 </body>
 </html>
