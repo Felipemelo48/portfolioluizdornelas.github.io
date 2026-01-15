@@ -1,97 +1,84 @@
-// Menu Mobile
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    console.log('Portfólio carregado!');
     
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+    // Atualiza ano no rodapé
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    
+    // Menu mobile
+    const menuBtn = document.querySelector('.cabecalho__botao-menu');
+    const menu = document.querySelector('.cabecalho__menu');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
         });
-        
-        // Fecha menu ao clicar em um link
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
+    }
+    
+    // Filtro de projetos
+    const filtros = document.querySelectorAll('.filtro');
+    const projetos = document.querySelectorAll('.projeto-card');
+    
+    filtros.forEach(filtro => {
+        filtro.addEventListener('click', () => {
+            filtros.forEach(f => f.classList.remove('filtro--ativo'));
+            filtro.classList.add('filtro--ativo');
+            
+            const categoria = filtro.dataset.filtro;
+            
+            projetos.forEach(projeto => {
+                const categorias = projeto.dataset.categorias.split(' ');
+                
+                if (categoria === 'todos' || categorias.includes(categoria)) {
+                    projeto.style.display = 'block';
+                } else {
+                    projeto.style.display = 'none';
+                }
             });
         });
-    }
-    
-    // Atualiza ano no footer
-    const yearSpan = document.getElementById('currentYear');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-    
-    // Formulário de contato (simulação)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Coleta dados do formulário
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Validação simples
-            if (!name || !email || !message) {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
-            
-            // Simula envio
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-            
-            // Simula delay de envio
-            setTimeout(() => {
-                alert(`Obrigado, ${name}! Sua mensagem foi enviada.\nEm breve entrarei em contato pelo e-mail ${email}.`);
-                
-                // Limpa formulário
-                contactForm.reset();
-                
-                // Restaura botão
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-    }
-    
-    // Scroll suave para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                e.preventDefault();
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
     });
     
-    // Adiciona classe ao header quando scroll
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.boxShadow = 'none';
+    // Animação de digitação
+    const digitarEl = document.querySelector('.digitar');
+    if (digitarEl) {
+        const textos = ['soluções digitais', 'experiências web', 'sistemas integrados'];
+        let i = 0, j = 0, apagando = false;
+        
+        function digitar() {
+            const textoAtual = textos[i];
+            
+            if (!apagando) {
+                digitarEl.textContent = textoAtual.substring(0, j + 1);
+                j++;
+                if (j === textoAtual.length) {
+                    apagando = true;
+                    setTimeout(digitar, 1000);
+                    return;
+                }
+            } else {
+                digitarEl.textContent = textoAtual.substring(0, j - 1);
+                j--;
+                if (j === 0) {
+                    apagando = false;
+                    i = (i + 1) % textos.length;
+                }
+            }
+            setTimeout(digitar, apagando ? 50 : 100);
         }
-    });
+        setTimeout(digitar, 500);
+    }
     
-    // Log inicial
-    console.log('Portfólio de Luiz Felipe carregado! 🚀');
+    // Botão voltar ao topo
+    const btnTopo = document.querySelector('.botao-topo');
+    if (btnTopo) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnTopo.style.display = 'block';
+            } else {
+                btnTopo.style.display = 'none';
+            }
+        });
+        
+        btnTopo.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
