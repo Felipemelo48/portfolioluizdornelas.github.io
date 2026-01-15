@@ -3,210 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Felipe Dornelas | Desenvolvedor Full-Stack</title>
-    <meta name="description" content="Portfólio de Luiz Felipe Dornelas - Desenvolvedor Full-Stack com React, Django, Python e Salesforce">
-    <meta name="keywords" content="desenvolvedor, fullstack, react, django, python, salesforce, portfólio">
+    <title>Luiz Felipe Dornelas | Portfólio</title>
+    <meta name="description" content="Portfólio de Luiz Felipe Dornelas - Desenvolvedor e Estudante de Sistemas de Informação">
+    <meta name="keywords" content="desenvolvedor, python, django, salesforce, portfolio, estágio TI">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__nav container">
-            <a href="#inicio" class="cabecalho__logo">Luiz<span>Felipe</span></a>
-            <ul class="cabecalho__menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#certificacoes">Certificações</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <button class="botao-tema" aria-label="Alternar modo claro/escuro">
-                <svg class="lua" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="sol" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
-            <button class="cabecalho__botao-menu" aria-label="Abrir menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Luiz<span>Felipe</span></a>
+                
+                <div class="nav-menu">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#formacao">Formação</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="inicio" class="hero container">
-            <div class="hero__conteudo">
-                <h1 class="hero__titulo">Transformando ideias em <span class="destaque digitar">soluções digitais</span></h1>
-                <p class="hero__subtitulo">Desenvolvedor Full-Stack com foco em <strong>React</strong>, <strong>Django</strong> e integração com <strong>Salesforce</strong></p>
-                <div class="hero__botoes">
-                    <a href="#projetos" class="botao botao--primario">Ver Projetos</a>
-                    <a href="#contato" class="botao botao--secundario">Contato</a>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Luiz Felipe <span class="highlight">Dornelas</span></h1>
+                    <h2 class="hero-subtitle">Estudante de Sistemas de Informação & Desenvolvedor</h2>
+                    <p class="hero-desc">
+                        Foco em <strong>Python</strong>, <strong>Django</strong>, <strong>Salesforce</strong> e <strong>Banco de Dados</strong>. 
+                        Buscando oportunidade de estágio para aplicar conhecimentos técnicos em projetos reais.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn btn-primary">
+                            <i class="fas fa-code"></i> Ver Projetos
+                        </a>
+                        <a href="#contato" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Contato
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src="https://i.ibb.co/cXxDTJhh/IMG-7646.jpg" alt="Luiz Felipe Dornelas">
+                    </div>
                 </div>
             </div>
-            <div class="hero__ilustracao">
-                <div class="hero__circulo">
-                    <div class="hero__codigo">{ code }</div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="sobre" class="secao secao--clara">
-            <div class="container">
-                <h2 class="secao__titulo">Sobre Mim</h2>
-                <div class="sobre__conteudo">
-                    <div class="sobre__texto">
-                        <p>Olá! Sou o Luiz, desenvolvedor apaixonado por criar soluções tecnológicas. Minha jornada evoluiu para o stack completo com <strong>React no front-end</strong> e <strong>Django/Python no back-end</strong>.</p>
-                        <p>Atualmente, estou expandindo minha expertise para o ecossistema <strong>Salesforce</strong>, completando a certificação de Administrador/Analista.</p>
-                        <p>Meu objetivo é construir aplicações que ofereçam uma experiência excepcional ao usuário final.</p>
-                    </div>
-                    <div class="sobre__imagem">
-                        <div class="sobre__avatar">LF</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="habilidades" class="secao">
-            <div class="container">
-                <h2 class="secao__titulo">Habilidades & Tecnologias</h2>
-                <div class="habilidades__grid">
-                    <div class="habilidade-categoria">
-                        <h3>Front-End</h3>
-                        <div class="habilidade-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag tag--destaque">React.js</span>
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sou estudante de <strong>Sistemas de Informação</strong> na Uninassau (Olinda-PE) 
+                        com formação técnica em <strong>Administração</strong> pelo SENAI-PE.
+                    </p>
+                    
+                    <p>
+                        Minha trajetória combina <strong>conhecimentos técnicos</strong> em desenvolvimento 
+                        com <strong>visão de negócios</strong>, permitindo-me criar soluções que são 
+                        tecnicamente sólidas e alinhadas com objetivos organizacionais.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Formação Dual</h4>
+                            <p>Sistemas de Info + Admin</p>
                         </div>
-                    </div>
-                    <div class="habilidade-categoria">
-                        <h3>Back-End</h3>
-                        <div class="habilidade-tags">
-                            <span class="tag tag--destaque">Python</span>
-                            <span class="tag tag--destaque">Django</span>
-                            <span class="tag">API REST</span>
-                            <span class="tag">PostgreSQL</span>
+                        
+                        <div class="highlight-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Foco Técnico</h4>
+                            <p>Python, Django, Salesforce</p>
                         </div>
-                    </div>
-                    <div class="habilidade-categoria">
-                        <h3>Plataformas</h3>
-                        <div class="habilidade-tags">
-                            <span class="tag tag--nova">Salesforce</span>
-                            <span class="tag">Git & GitHub</span>
-                            <span class="tag">VS Code</span>
+                        
+                        <div class="highlight-item">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Objetivo</h4>
+                            <p>Estágio em TI/Desenvolvimento</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projetos" class="secao secao--clara">
-            <div class="container">
-                <h2 class="secao__titulo">Projetos em Destaque</h2>
-                <div class="filtros">
-                    <button class="filtro filtro--ativo" data-filtro="todos">Todos</button>
-                    <button class="filtro" data-filtro="react">React</button>
-                    <button class="filtro" data-filtro="django">Django</button>
-                    <button class="filtro" data-filtro="salesforce">Salesforce</button>
+    <!-- Skills -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills & Tecnologias</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fab fa-python"></i> Backend & Dados</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Oracle Database</span>
+                        <span class="skill-tag">PL/SQL</span>
+                        <span class="skill-tag">API REST</span>
+                    </div>
                 </div>
-                <div class="projetos__grid">
-                    <article class="projeto-card" data-categorias="react django">
-                        <div class="projeto-card__imagem projeto1"></div>
-                        <div class="projeto-card__conteudo">
-                            <h3>Sistema de Gerenciamento</h3>
-                            <p>Aplicação full-stack com React e Django.</p>
-                            <div class="projeto-card__tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Django</span>
-                            </div>
-                            <div class="projeto-card__links">
-                                <a href="#" class="link-icon">Demo</a>
-                                <a href="#" class="link-icon">Código</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="projeto-card" data-categorias="salesforce">
-                        <div class="projeto-card__imagem projeto2"></div>
-                        <div class="projeto-card__conteudo">
-                            <h3>Integração Salesforce</h3>
-                            <p>Dashboard com dados da API do Salesforce.</p>
-                            <div class="projeto-card__tags">
-                                <span class="tag tag--nova">Salesforce</span>
-                                <span class="tag">React</span>
-                            </div>
-                            <div class="projeto-card__links">
-                                <a href="#" class="link-icon">Case Study</a>
-                                <a href="#" class="link-icon">Conceito</a>
-                            </div>
-                        </div>
-                    </article>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frontend & Web</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Plataformas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight-tag">Salesforce</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Ferramentas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Excel Avançado</span>
+                        <span class="skill-tag">Análise de Dados</span>
+                        <span class="skill-tag">Pacote Office</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="certificacoes" class="secao">
-            <div class="container">
-                <h2 class="secao__titulo">Certificações</h2>
-                <div class="certificacoes__grid">
-                    <article class="certificado-card">
-                        <div class="certificado-card__cabecalho">
-                            <h3>Administrador/Analista Salesforce</h3>
-                            <span class="certificado-card__badge">NOVO</span>
-                        </div>
-                        <p class="certificado-card__instituicao">Udemy | Instrutor: Vitor Nishida</p>
-                        <p class="certificado-card__descricao">Curso completo abrangendo fundamentos da plataforma Salesforce.</p>
-                        <div class="certificado-card__tags">
+    <!-- Formação & Certificações -->
+    <section id="formacao" class="section">
+        <div class="container">
+            <h2 class="section-title">Formação & Certificações</h2>
+            
+            <div class="timeline">
+                <!-- Formação Acadêmica -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Presente</div>
+                    <div class="timeline-content">
+                        <h3>Bacharelado em Sistemas de Informação</h3>
+                        <p class="timeline-sub">Uninassau - Olinda, PE</p>
+                        <p>Em andamento. Disciplinas: Desenvolvimento de Software, Banco de Dados, 
+                        Arquitetura de Sistemas, Gestão de Projetos de TI.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Técnico em Administração</h3>
+                        <p class="timeline-sub">SENAI - Pernambuco</p>
+                        <p>Concluído. Foco em gestão empresarial, análise de indicadores, 
+                        processos organizacionais e finanças.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificações -->
+                <div class="timeline-item highlight-item">
+                    <div class="timeline-date">Em andamento</div>
+                    <div class="timeline-content">
+                        <div class="cert-badge">NOVO</div>
+                        <h3>Administrador/Analista Salesforce</h3>
+                        <p class="timeline-sub">Udemy - Vitor Nishida</p>
+                        <p>Curso completo da plataforma: customização de objetos, automação com Flows, 
+                        gestão de dados, relatórios e dashboards.</p>
+                        <div class="tags">
                             <span class="tag">Salesforce Platform</span>
                             <span class="tag">CRM</span>
+                            <span class="tag">Business Automation</span>
                         </div>
-                    </article>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">120 horas</div>
+                    <div class="timeline-content">
+                        <h3>Python 3 do Básico ao Avançado</h3>
+                        <p class="timeline-sub">Udemy</p>
+                        <p>Curso completo de Python 3: fundamentos, POO, manipulação de arquivos, 
+                        APIs e bibliotecas essenciais.</p>
+                        <div class="tags">
+                            <span class="tag">Python 3</span>
+                            <span class="tag">POO</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">89 horas</div>
+                    <div class="timeline-content">
+                        <h3>Banco de Dados Oracle & PL/SQL</h3>
+                        <p class="timeline-sub">Udemy</p>
+                        <p>Modelagem de dados e programação PL/SQL: administração de bancos Oracle, 
+                        otimização de queries e procedures.</p>
+                        <div class="tags">
+                            <span class="tag">Oracle Database</span>
+                            <span class="tag">PL/SQL</span>
+                            <span class="tag">Modelagem de Dados</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">8 horas</div>
+                    <div class="timeline-content">
+                        <h3>Curso de Python</h3>
+                        <p class="timeline-sub">Santander Open Academy</p>
+                        <p>Fundamentos de Python com foco em aplicações práticas e introdução 
+                        à programação para resolução de problemas.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Lógica de Programação</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contato" class="secao secao--clara">
-            <div class="container">
-                <h2 class="secao__titulo">Contato</h2>
-                <div class="contato__grid">
-                    <form class="contato__form" id="formContato">
-                        <div class="form__grupo">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" required>
+    <!-- Projetos -->
+    <section id="projetos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            <p class="section-subtitle">Alguns dos meus trabalhos e estudos recentes</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image python-bg">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand"></i>
                         </div>
-                        <div class="form__grupo">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema em Django</h3>
+                        <p>Aplicação web full-stack com Python/Django para gestão de dados, 
+                        autenticação de usuários e relatórios.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image salesforce-bg">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Integração Salesforce</h3>
+                        <p>Dashboard conceitual que consome dados da API do Salesforce para 
+                        visualização de métricas de CRM.</p>
+                        <div class="project-tech">
+                            <span class="highlight-tech">Salesforce</span>
+                            <span>React</span>
+                            <span>API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Conceito</a>
+                            <a href="#"><i class="fas fa-file-alt"></i> Estudo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image db-bg">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de Banco de Dados</h3>
+                        <p>Modelagem e implementação de banco de dados Oracle com PL/SQL, 
+                        procedures e otimização de queries.</p>
+                        <div class="project-tech">
+                            <span>Oracle</span>
+                            <span>PL/SQL</span>
+                            <span>Modelagem</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Scripts</a>
+                            <a href="#"><i class="fas fa-database"></i> Schema</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-subtitle">Vamos conversar sobre oportunidades de estágio ou projetos</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><i class="fas fa-paper-plane"></i> Entre em Contato</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Disponível para</h4>
+                            <p>Estágio em TI / Desenvolvimento</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Olinda, Pernambuco</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>Formação</h4>
+                            <p>Sistemas de Informação - Uninassau</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-links">
+                        <a href="https://github.com/Felipemelo48" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:exemplo@email.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" placeholder="seu@email.com" required>
                         </div>
-                        <div class="form__grupo">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" rows="5" placeholder="Conte sobre a oportunidade..." required></textarea>
                         </div>
-                        <button type="submit" class="botao botao--primario">Enviar</button>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
                     </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="rodape">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>© <span id="ano-atual">2025</span> Luiz Felipe Dornelas</p>
+            <div class="footer-content">
+                <div class="footer-logo">Luiz Felipe Dornelas</div>
+                <p>Desenvolvedor & Estudante de Sistemas de Informação</p>
+                
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#formacao">Formação</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                
+                <p class="footer-copyright">
+                    &copy; <span id="currentYear"></span> - Portfólio desenvolvido com HTML, CSS e JavaScript
+                </p>
+            </div>
         </div>
     </footer>
 
-    <button class="botao-topo">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
